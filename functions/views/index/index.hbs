@@ -1,9 +1,67 @@
-{{!< layout/layout}}
 
-<div>
-    {{privateKey}}
-</div>
-
-<div>
-    {{address}}
+<div class="container">
+    <section class="card">
+        <h2 class="card-header">Check Token Balance!</h2>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="checkBalanceAddress">Ethereum Address</label>
+                <input aria-describedby="checkBalanceAddressHelp" type="text" name="checkBalanceAddress" id="checkBalanceAddress" class="form-control" placeholder="Enter Ethereum address">
+                <small id="checkBalanceAddressHelp" class="form-text text-muted">Only checking ERC20 tokens of {{tokenContractAddress}}</small>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="button" id="getTokenBalance">Check Balance</button>
+            </div>
+            <hr>
+            <div class="form-group">
+                <label for="checkBalanceBalance">Balance</label>
+                <input placeholder="Balance will be displayed here" readonly="readonly" type="text" name="checkBalanceBalance" id="checkBalanceBalance" class="form-control">
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="card">
+        <h2 class="card-header">Get Some Tokens!</h2>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="getTokenAddress">Ethereum Address</label>
+                <input id="getTokenAddress" name="getTokenAddress" type="text" class="form-control" placeholder="Enter ethereum address">
+            </div>
+            <div class="form-group">
+                <label for="getTokenAmount">Amount</label>
+                <input aria-describedby="getTokenAmountHelp" id="getTokenAmount" name="getTokenAmount" type="number" class="form-control" placeholder="Enter amount" max="100000">
+                <small id="getTokenAmountHelp" class="text-muted form-text">Max amount is 100,000</small>
+            </div>
+            <div class="form-group">
+                <button id="getTokens" type="button" class="btn btn-success">Get Tokens!</button>
+            </div>
+            <hr>
+            <div class="form-group">
+                <label>Transaction</label>
+                <div id="transactionEtherscanLink">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="card">
+        <h2 class="card-header">Get new Private Key!</h2>
+        <div class="card-body">
+            <div class="form-group">
+                <button type="button" id="getPrivateKey" class="btn btn-danger">Get Private Key!</button>
+            </div>
+            <div class="form-group">
+                <label for="getPKPrivateKey">Private Key</label>
+                <input id="getPKPrivateKey" name="getPKPrivateKey" aria-describedby="getPKPrivateKeyHelp" readonly="readonly" type="text" class="form-control" placeholder="Private key">
+                <small id="getPKPrivateKeyHelp" class="form-text text-muted">Private keys generated here are not secure, please do not use for any funds. This is only for demonstration purposes.</small>
+            </div>
+            <div class="form-group">
+                <label for="getPKPublicAddress">Public Address</label>
+                <input id="getPKPublicAddress" name="getPKPublicAddress" readonly="readonly" type="text" class="form-control" placeholder="Public address">
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <script src='/scripts/app/index/index.js'></script>
 </div>
