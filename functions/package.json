@@ -20,7 +20,7 @@
     "firebase-functions": "^2.1.0",
     "handlebars": "^4.0.12",
     "hdkey": "^1.1.0",
-    "web3": "github:ethereum/web3.js"
+    "web3": "1.0.0-beta.36"
   },
   "devDependencies": {
     "eslint": "^5.8.0",

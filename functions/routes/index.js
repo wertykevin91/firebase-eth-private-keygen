@@ -82,7 +82,7 @@ router.post('/index/tokenBalance', (request, response) => {
         response.json({balance: balance.toString()});
         return;
     }).catch(() =>{
-        response.json({error: "Unable to retrive balance for " + address});
+        response.json({error: "Unable to retrieve balance for " + address});
     });
 });
 
